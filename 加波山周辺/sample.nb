@@ -1,0 +1,131 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3832,        123]
+NotebookOptionsPosition[      3381,        107]
+NotebookOutlinePosition[      3788,        124]
+CellTagsIndexPosition[      3745,        121]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", 
+  "csv\:3068\:540c\:5c64\:306e\:30d5\:30a9\:30eb\:30c0\:306b\:3053\:306enb\
+\:3092\:304a\:3044\:3066", "*)"}]], "Input",
+ CellChangeTimes->{{3.901397051516041*^9, 
+  3.901397088454843*^9}},ExpressionUUID->"b9ac4a72-094b-447e-9797-\
+018c5511b371"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SetDirectory", "@", 
+   RowBox[{"NotebookDirectory", "[", "]"}]}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"FileNames", "[", "\"\<*.csv\>\"", "]"}], ";"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"FileNames", "[", "\"\<6453394b8878c25cdb493d75.csv\>\"", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"rawdat", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Import", "[", 
+      RowBox[{"#", ",", "\"\<Text\>\""}], "]"}], "&"}], "@", 
+    RowBox[{"%", "[", 
+     RowBox[{"[", 
+      RowBox[{"(", 
+       RowBox[{"-", "1"}], ")"}], "]"}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"StringReplace", "[", 
+   RowBox[{"%", ",", 
+    RowBox[{"\"\<,\>\"", "->", "\"\<,\\n\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"StringReplace", "[", 
+   RowBox[{"%", ",", 
+    RowBox[{"\"\<[\>\"", "->", "\"\<\\n[\\n\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"StringReplace", "[", 
+   RowBox[{"%", ",", 
+    RowBox[{"\"\<]\>\"", "->", "\"\<\\n]\\n\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"StringReplace", "[", 
+   RowBox[{"%", ",", 
+    RowBox[{"\"\<{\>\"", "->", "\"\<\\n{\\n\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"StringReplace", "[", 
+   RowBox[{"%", ",", 
+    RowBox[{"\"\<}\>\"", "->", "\"\<\\n}\\n\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"StringReplace", "[", 
+   RowBox[{"%", ",", 
+    RowBox[{"\"\<[\>\"", "->", "\"\<{\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"StringReplace", "[", 
+   RowBox[{"%", ",", 
+    RowBox[{"\"\<]\>\"", "->", "\"\<}\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"StringReplace", "[", 
+   RowBox[{"%", ",", 
+    RowBox[{"\"\<,\>\"", "->", "\"\<\\n,\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"StringReplace", "[", 
+   RowBox[{"%", ",", 
+    RowBox[{"\"\<,\\n\\\"\>\"", "->", "\"\<,\\\"\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"StringReplace", "[", 
+   RowBox[{"%", ",", 
+    RowBox[{"\"\<\\n\\n\>\"", "->", "\"\<\\n\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"StringReplace", "[", 
+  RowBox[{"%", ",", 
+   RowBox[{"\"\<:\>\"", "->", "\"\<->\>\""}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.901397149378924*^9, 3.9013971504528427`*^9}, {
+  3.90139719103681*^9, 
+  3.9013972192577333`*^9}},ExpressionUUID->"0cb508a5-722b-4227-9c59-\
+d2e8fce2e096"]
+},
+WindowSize->{808, 677},
+WindowMargins->{{240, Automatic}, {Automatic, 6}},
+FrontEndVersion->"13.2 for Mac OS X x86 (64-bit) \
+(2023\:5e741\:670830\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"b8fe39ff-fef6-4002-bf19-f0732593f3bb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 276, 6, 30, "Input",ExpressionUUID->"b9ac4a72-094b-447e-9797-018c5511b371"],
+Cell[837, 28, 2540, 77, 325, "Input",ExpressionUUID->"0cb508a5-722b-4227-9c59-d2e8fce2e096"]
+}
+]
+*)
+
